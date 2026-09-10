@@ -87,6 +87,15 @@ button { -webkit-tap-highlight-color: transparent; }
 
 @keyframes scrollAds { from { transform: translateX(0); } to { transform: translateX(50%); } }
 
+/* News & Faith Ticker Banner */
+.news-ticker-container { display: flex; align-items: center; width: 100%; margin: 10px 0; padding: 4px 10px; border: 1px solid var(--blue-border); border-radius: 12px; background: linear-gradient(135deg, var(--soft-blue-2), var(--white)); box-shadow: 0 2px 8px rgba(2, 132, 199, 0.06); overflow: hidden; position: relative; }
+.news-ticker-content { flex: 1; overflow: hidden; position: relative; height: 20px; display: flex; align-items: center; direction: ltr; }
+.news-ticker-track { display: flex; gap: 40px; white-space: nowrap; width: max-content; animation: scrollNewsTrack 22s linear infinite; }
+.news-ticker-container:hover .news-ticker-track { animation-play-state: paused; }
+.news-ticker-track span { display: inline-block; direction: rtl; color: var(--primary-900); font-size: 11px; font-weight: 800; }
+
+@keyframes scrollNewsTrack { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
 .ad-fallback-card { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 290px; height: 130px; padding: 12px; border: 1px solid var(--blue-border); border-radius: 16px; background: linear-gradient(135deg, var(--soft-blue), var(--white)); color: var(--primary-900); box-sizing: border-box; cursor: pointer; }
 .ad-fallback-icon { font-size: 30px; color: var(--primary-600); margin-bottom: 4px; }
 .ad-fallback-card strong { font-size: 13.5px; margin-bottom: 2px; color: var(--primary-900); }
