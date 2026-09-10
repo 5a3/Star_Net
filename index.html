@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar">
 <head>
 <meta charset="utf-8"/>
 <meta name="theme-color" content="#f4f7f4">
-<title>صدى نت</title>
+<title>أمواج نت</title>
 <meta content="width=device-width, initial-scale=1, user-scalable=yes" name="viewport"/>
 <link href="css/icons.css" rel="stylesheet"/>
 <link href="css/style.css" rel="stylesheet"/>
@@ -12,20 +12,12 @@
 <div class="container">
 <div class="screen">
 <div class="screen-content">
-<div aria-hidden="true" class="welcome-modal-overlay" id="welcomeNotice">
-<div aria-label="إشعار ترحيبي" class="welcome-modal-card" role="dialog">
-<span class="welcome-icon icon-bell-alt"></span>
-<h3>مرحباً بكم في شبكة صدى نت</h3>
-<p class="welcome-friday">مبارك عليكم يوم الجمعة، وأكثروا من الصلاة والسلام على النبي محمد صلى الله عليه وسلم.</p>
-<p class="welcome-free">صلوا عليه وسلموا تسليما <b dir="ltr"></b>.</p>
-<button class="welcome-continue" id="welcomeContinueBtn" type="button">متابعة</button>
-</div>
-</div>
 <div class="login" id="login">
 <div class="main-frame brand-frame">
 <div aria-label="التاريخ" class="brand-dates">
-<span id="gregorianDate"></span>
-<span id="hijriDate"></span>
+<span class="date-chip date-hijri"><span class="date-label">هجري:</span> <strong id="hijriDate">-- / -- / ---- هـ</strong></span>
+<span class="date-divider">•</span>
+<span class="date-chip date-gregorian"><span class="date-label">ميلادي:</span> <strong id="gregorianDate">---- / -- / -- مـ</strong></span>
 </div>
 <div class="logo"></div>
 <div class="brand-divider"></div>
@@ -44,13 +36,23 @@
 
 
             <div class="ads-marquee-container glossy-frame">
-                <div class="ads-track">
-                    <a href="https://wa.me/967776964570"><img src="img/ad1.jpg" alt="إعلان 1" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad2.jpg" alt="إعلان 2" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad3.jpg" alt="إعلان 3" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad1.jpg" alt="إعلان 1" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad2.jpg" alt="إعلان 2" loading="lazy" decoding="async" fetchpriority="low"></a>
-                    <a href="https://wa.me/967776964570"><img src="img/ad3.jpg" alt="إعلان 3" loading="lazy" decoding="async" fetchpriority="low"></a>
+                <div class="ads-track" id="adsTrack">
+                    <button type="button" class="ad-item" onclick="openAdModal(this)"><img src="ads/ad1.svg" alt="شبكة أمواج نت - سرعات فائقة" onerror="handleAdError(this, 'شبكة أمواج نت', 'أفضل سرعات الإنترنت والميزات')" loading="lazy" decoding="async"></button>
+                    <button type="button" class="ad-item" onclick="openAdModal(this)"><img src="ads/ad2.svg" alt="عروض كروت أمواج - أقوى الباقات" onerror="handleAdError(this, 'عروض كروت أمواج', 'تواصل مع الدعم الفني لأي استفسار')" loading="lazy" decoding="async"></button>
+                    <button type="button" class="ad-item" onclick="openAdModal(this)"><img src="ads/ad3.svg" alt="خدمة العملاء والدعم 24/7" onerror="handleAdError(this, 'خدمة فائقة السرعة', 'أمواج نت ترحب بكم دائماً')" loading="lazy" decoding="async"></button>
+                    <button type="button" class="ad-item" onclick="openAdModal(this)"><img src="ads/ad1.svg" alt="شبكة أمواج نت - سرعات فائقة" onerror="handleAdError(this, 'شبكة أمواج نت', 'أفضل سرعات الإنترنت والميزات')" loading="lazy" decoding="async"></button>
+                    <button type="button" class="ad-item" onclick="openAdModal(this)"><img src="ads/ad2.svg" alt="عروض كروت أمواج - أقوى الباقات" onerror="handleAdError(this, 'عروض كروت أمواج', 'تواصل مع الدعم الفني لأي استفسار')" loading="lazy" decoding="async"></button>
+                    <button type="button" class="ad-item" onclick="openAdModal(this)"><img src="ads/ad3.svg" alt="خدمة العملاء والدعم 24/7" onerror="handleAdError(this, 'خدمة فائقة السرعة', 'أمواج نت ترحب بكم دائماً')" loading="lazy" decoding="async"></button>
+                </div>
+            </div>
+
+            <div aria-hidden="true" class="welcome-modal-overlay" id="adModal">
+                <div class="ad-modal-card" role="dialog">
+                    <button class="ad-modal-close" onclick="closeAdModal()" type="button" aria-label="إغلاق">&times;</button>
+                    <div class="ad-modal-img-wrapper">
+                        <img id="adModalImg" src="" alt="معاينة الإعلان">
+                    </div>
+                    <p class="ad-modal-title" id="adModalTitle">إعلان شبكة أمواج نت</p>
                 </div>
             </div>
 
@@ -122,7 +124,7 @@
 <div class="popup-hero">
 <span class="popup-hero-icon icon-wifi"></span>
 <div>
-<h3>شبكة صدى نت</h3>
+<h3>شبكة أمواج نت</h3>
 <p>بوابة إنترنت بالكرت صُممت لتسهيل الدخول، متابعة بيانات الكرت، والتواصل مع الدعم الفني بسرعة ووضوح.</p>
 </div>
 </div>
@@ -174,7 +176,7 @@
 <div class="price-hero">
 <span class="price-hero-icon">★</span>
 <div>
-<h3>باقات صدى نت</h3>
+<h3>باقات أمواج نت</h3>
 <p>اختر الباقة المناسبة لك حسب الرصيد والصلاحية الموضحين.</p>
 </div>
 </div>
@@ -280,7 +282,7 @@
 <span class="popup-hero-icon icon-basket"></span>
 <div>
 <h3>أماكن توفر كروت الشبكة</h3>
-<p>تتوفر كروت صدى نت في البقالات والنقاط المعتمدة داخل مناطق التغطية.</p>
+<p>تتوفر كروت أمواج نت في البقالات والنقاط المعتمدة داخل مناطق التغطية.</p>
 </div>
 </div>
 <div class="sell-cards">
@@ -457,6 +459,55 @@
 <script src="js/hotCookie.min.js"></script>
 <script block-time="1" enable-hot-blocker="" src="js/hotBlocker.min.js" try-count="10"></script>
 <script link-login-only="$(link-login-only)" src="js/main.min.js"></script>
+<script>
+function handleAdError(img, title, subtitle) {
+    var parent = img.parentElement;
+    var fallback = document.createElement('div');
+    fallback.className = 'ad-fallback-card';
+    fallback.onclick = function() { openAdModal(fallback); };
+    fallback.innerHTML = '<span class="ad-fallback-icon icon-signal"></span><strong>' + title + '</strong><small>' + subtitle + '</small>';
+    parent.replaceChild(fallback, img);
+}
+
+function openAdModal(el) {
+    var modal = document.getElementById("adModal");
+    var modalImg = document.getElementById("adModalImg");
+    var modalTitle = document.getElementById("adModalTitle");
+    if (!modal || !modalImg) return;
+    
+    var img = el.tagName === 'IMG' ? el : el.querySelector('img');
+    if (img) {
+        modalImg.src = img.src;
+        modalTitle.textContent = img.alt || "إعلان شبكة أمواج نت";
+    } else {
+        var strong = el.querySelector('strong');
+        if (strong && modalTitle) {
+            modalTitle.textContent = strong.textContent;
+        }
+    }
+    
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+}
+
+function closeAdModal() {
+    var modal = document.getElementById("adModal");
+    if (!modal) return;
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("adModal");
+    if (modal) {
+        modal.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                closeAdModal();
+            }
+        });
+    }
+});
+</script>
 
 </div>
 </body>
