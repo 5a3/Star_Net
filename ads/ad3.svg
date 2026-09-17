@@ -1,22 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260">
   <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0369a1"/>
-      <stop offset="60%" stop-color="#0284c7"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+    <linearGradient id="bgStar3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="60%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0284c7"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="260" rx="20" fill="url(#bg3)"/>
-  <path d="M0,160 C150,230 350,110 600,180 L600,260 L0,260 Z" fill="#06b6d4" opacity="0.3"/>
+  <rect width="600" height="260" rx="20" fill="url(#bgStar3)"/>
+  <path d="M0,160 C150,230 350,110 600,180 L600,260 L0,260 Z" fill="#6366f1" opacity="0.3"/>
 
-  <g transform="translate(40, 40)">
-    <rect x="0" y="0" width="150" height="34" rx="17" fill="#ffffff" opacity="0.25"/>
-    <text x="75" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">🎧 الدعم الفني 24/7</text>
-    
-    <text x="0" y="75" font-family="'Segoe UI', Tahoma, sans-serif" font-size="32" font-weight="900" fill="#ffffff">خدمة العملاء في خدمتكم دائمًا</text>
-    <text x="0" y="112" font-family="'Segoe UI', Tahoma, sans-serif" font-size="18" font-weight="700" fill="#bae6fd">تواصل معنا عبر الاتصال أو الواتساب لأي استفسار</text>
+  <!-- Badge -->
+  <rect x="30" y="22" width="160" height="32" rx="16" fill="#ffffff" opacity="0.2"/>
+  <text x="110" y="43" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="13" font-weight="900" fill="#ffffff" text-anchor="middle">🎧 الدعم الفني 24/7</text>
+  
+  <!-- Main Title -->
+  <text x="30" y="96" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="26" font-weight="900" fill="#ffffff">خدمة عملاء ستار نت في خدمتكم</text>
+  
+  <!-- Subtitle -->
+  <text x="30" y="132" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#c7d2fe">تواصل معنا عبر الاتصال أو الواتساب لأي استفسار</text>
 
-    <rect x="0" y="132" width="170" height="42" rx="21" fill="#ffffff"/>
-    <text x="85" y="158" font-family="'Segoe UI', Tahoma, sans-serif" font-size="15" font-weight="900" fill="#0369a1" text-anchor="middle">تواصل معنا الآن 💬</text>
+  <!-- Action Button -->
+  <rect x="30" y="162" width="160" height="40" rx="20" fill="#ffffff"/>
+  <text x="110" y="187" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="14" font-weight="900" fill="#1e1b4b" text-anchor="middle">تواصل معنا الآن 💬</text>
+
+  <!-- Right Classic 5-Point Star Graphic -->
+  <g transform="translate(510, 130)">
+    <circle cx="0" cy="0" r="38" fill="#38bdf8" opacity="0.2"/>
+    <polygon points="0,-22 5.2,-7.1 20.9,-6.7 8.3,5.8 12.9,17.8 0,8.8 -12.9,17.8 -8.3,5.8 -20.9,-6.7 -5.2,-7.1" fill="#fbbf24"/>
   </g>
 </svg>

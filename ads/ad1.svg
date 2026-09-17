@@ -1,34 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 260" width="600" height="260">
   <defs>
-    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#032b45"/>
-      <stop offset="50%" stop-color="#0284c7"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
+    <linearGradient id="bgStar1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
     </linearGradient>
-    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#e0f2fe" stop-opacity="0.8"/>
+    <linearGradient id="starAccent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.6"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="260" rx="20" fill="url(#bg1)"/>
-  <path d="M0,180 Q150,120 300,180 T600,150 L600,260 L0,260 Z" fill="url(#waveGrad1)"/>
-  <path d="M0,210 Q200,170 400,220 T600,190 L600,260 L0,260 Z" fill="#0ea5e9" opacity="0.4"/>
+  <rect width="600" height="260" rx="20" fill="url(#bgStar1)"/>
   
-  <g transform="translate(40, 40)">
-    <rect x="0" y="0" width="120" height="34" rx="17" fill="#ffffff" opacity="0.25"/>
-    <text x="60" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">⚡ 5G SPEED</text>
-    
-    <text x="0" y="75" font-family="'Segoe UI', Tahoma, sans-serif" font-size="34" font-weight="900" fill="#ffffff">شبكة أمواج نت</text>
-    <text x="0" y="112" font-family="'Segoe UI', Tahoma, sans-serif" font-size="19" font-weight="700" fill="#bae6fd">تغطية واسعة وسرعات إنترنت فائقة بدون انقطاع</text>
+  <path d="M0,180 Q150,120 300,170 T600,140 L600,260 L0,260 Z" fill="url(#starAccent1)"/>
 
-    <rect x="0" y="132" width="170" height="42" rx="21" fill="#ffffff"/>
-    <text x="85" y="158" font-family="'Segoe UI', Tahoma, sans-serif" font-size="15" font-weight="900" fill="#0369a1" text-anchor="middle">تصفح الباقات 🚀</text>
-  </g>
+  <!-- Badge -->
+  <rect x="30" y="22" width="130" height="32" rx="16" fill="#fbbf24" opacity="0.25"/>
+  <text x="95" y="43" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="13" font-weight="900" fill="#fef08a" text-anchor="middle">⚡ 5G SPEED</text>
+  
+  <!-- Main Title -->
+  <text x="30" y="96" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="28" font-weight="900" fill="#ffffff">شبكة ستار نت</text>
+  
+  <!-- Subtitle -->
+  <text x="30" y="132" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="15" font-weight="700" fill="#c7d2fe">تغطية واسعة وسرعات إنترنت فضائية بدون انقطاع</text>
 
-  <g transform="translate(480, 110)" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9">
-    <path d="M -40 30 A 50 50 0 0 1 40 30" />
-    <path d="M -26 44 A 32 32 0 0 1 26 44" />
-    <path d="M -12 58 A 15 15 0 0 1 12 58" />
-    <circle cx="0" cy="68" r="4" fill="#ffffff" />
+  <!-- Action Button -->
+  <rect x="30" y="162" width="160" height="40" rx="20" fill="#f59e0b"/>
+  <text x="110" y="187" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-size="14" font-weight="900" fill="#0f172a" text-anchor="middle">تصفح الباقات 🚀</text>
+
+  <!-- Right Classic 5-Point Star Graphic -->
+  <g transform="translate(510, 130)">
+    <circle cx="0" cy="0" r="42" fill="#38bdf8" opacity="0.18"/>
+    <!-- Classic 5-point star -->
+    <polygon points="0,-30 7.05,-9.7 28.5,-9.2 11.4,7.9 17.6,24.3 0,12 -17.6,24.3 -11.4,7.9 -28.5,-9.2 -7.05,-9.7" fill="#fbbf24"/>
+    <polygon points="0,-18 4.2,-5.8 17.1,-5.5 6.8,4.7 10.5,14.5 0,7.2 -10.5,14.5 -6.8,4.7 -17.1,-5.5 -4.2,-5.8" fill="#ffffff"/>
   </g>
 </svg>
